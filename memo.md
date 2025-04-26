@@ -30,3 +30,14 @@
 - **zod & react-hook-form**
   - `zod`、`@hookform/resolvers`、`react-hook-form` をインストール。
   - フォームバリデーションの準備を整備。
+
+### 2025年4月27日
+
+- **カスタムフック**
+  - `zod` と `react-hook-form` を使用したバリデーションをカスタムフック `useAuth` に移動。
+  - `onSubmit` 処理を `useCallback` を使用してメモ化。
+  - `src/hooks/useAuth.ts` にカスタムフックを作成し、再利用可能な形にリファクタリング。
+
+- **SignIn.tsx**
+  - カスタムフック `useAuth` を使用してコードを簡素化。
+  - バリデーションと送信処理をフックに委譲し、コンポーネントの責務を軽減。
